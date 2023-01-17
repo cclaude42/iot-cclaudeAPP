@@ -1,0 +1,32 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: cclaude-playground
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: cclaude-app
+  template:
+    metadata:
+      labels:
+        app: cclaude-app
+    spec:
+      containers:
+      - name: wil-playground-lol
+        image: wil42/playground:v1
+        ports:
+        - containerPort: 80
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: cclaude-playground
+spec:
+  selector:
+    app: cclaude-app
+  ports:
+  - name: http
+    port: 80
+    targetPort: 80
+  type: ClusterIP
