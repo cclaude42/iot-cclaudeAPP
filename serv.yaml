@@ -39,7 +39,7 @@ metadata:
     app.kubernetes.io/instance: one
     app.kubernetes.io/version: "1.10"
 spec:
-  replicas: 1
+  replicas: 3
   selector:
     matchLabels:
       app.kubernetes.io/name: app
