@@ -27,6 +27,6 @@ spec:
     app: my-app
   ports:
   - name: http
-    port: 8888
-    targetPort: http
+    port: 80
+    targetPort: 80
   type: ClusterIP
