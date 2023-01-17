@@ -13,7 +13,8 @@ spec:
         app: cclaude-app
     spec:
       containers:
-      - image: wil42/playground:v1
+      - name: wil-playground
+        image: wil42/playground:v1
         ports:
         - containerPort: 8888
 ---
