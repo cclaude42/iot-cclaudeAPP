@@ -1,16 +1,16 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: my-deployment
+  name: cclaude-playground
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: my-app
+      app: cclaude-app
   template:
     metadata:
       labels:
-        app: my-app
+        app: cclaude-app
     spec:
       containers:
       - name: wil-playground-lol
@@ -21,10 +21,10 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: my-service
+  name: cclaude-playground
 spec:
   selector:
-    app: my-app
+    app: cclaude-app
   ports:
   - name: http
     port: 80
