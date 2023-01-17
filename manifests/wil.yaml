@@ -26,6 +26,7 @@ spec:
   selector:
     app: cclaude-app
   ports:
-  - port: 8888
+  - name: http
+    port: 8888
     targetPort: 8888
   type: ClusterIP
