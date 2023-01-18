@@ -29,4 +29,4 @@ spec:
   - name: http
     port: 8888
     targetPort: 8888
-  type: ClusterIP
+  type: LoadBalancer
